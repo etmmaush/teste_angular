@@ -1,0 +1,9 @@
+.heading{
+    font-weight: 600;
+    color: $color-primary;
+    padding-bottom: 1rem;
+
+    @media (max-width: 290px) {
+        font-size: 100%;
+    }
+}

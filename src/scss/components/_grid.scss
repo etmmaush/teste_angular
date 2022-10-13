@@ -1,0 +1,127 @@
+.grid{
+
+    &_container{
+      width: 100%;
+      height: calc(100vh - 16rem);
+      overflow: auto;
+      background-color: transparent;
+      position: relative;
+      margin-top: 1rem;
+  
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: $c-text-secondary; 
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        background: #1a1a1a; 
+      }
+    }
+  
+    &_sub{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    &_wrapper{
+      width: 100%;
+    }
+  
+    &_row{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) ; 
+      border-bottom: 2px solid $c-text-primary;
+  
+      &:first-child{
+        border-top: 2px solid $c-text-primary;
+      }
+    }
+  
+    &_header{
+      width: 100%;
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      color: inherit;
+      padding-left: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: .5rem;
+  
+      &--icon{
+        color: #fff;
+        background-color: $c-text-secondary;
+        border-radius: 50%;
+        font-size: .7rem;
+        padding: .2rem .4rem;
+        margin-left: .3rem;
+      }
+  
+    }
+  
+    &_item{
+      position: relative;
+  
+      &:first-child{
+        border-left: 2px solid $c-text-primary;
+      }
+  
+      &:last-child{
+        border-right: 2px solid $c-text-primary;
+      }
+  
+      &:not(:last-child){
+        border-right: 2px solid $c-text-primary;
+      }
+  
+      &--icon{
+        color: #fff;
+        background-color: $c-text-secondary;
+        border-radius: 50%;
+        font-size: .7rem;
+        padding: .2rem .4rem;
+        margin-left: .5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: .4rem;
+      }
+  
+      img{
+        width: 3rem;
+        max-width: 3rem;
+      }
+    }  
+  
+    &_input{
+      width: 100%;
+      height: 2rem;
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      color: inherit;
+      padding-left: .5rem;
+  
+      &:focus{
+        background-color: #fff;
+        border-radius: 0;
+        outline: none;
+      }
+    }
+  }
+  
+  .teste{
+    width: 100%;
+  }

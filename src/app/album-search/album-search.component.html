@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="row mt-4 align-items-center">
+    <div class="col-6">
+      <h3>Buscar álbums</h3>
+    </div>
+  </div>
+ 
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="row mt-2 align-items-center">
+        <div class="col-6">
+            <input class="form-control" placeholder="Pesquisar" type="text" formControlName="name">
+        </div>
+
+        <div class="col-1" >
+            <button type="submit">
+                <fa-icon [icon]="faSearch" cursor="pointer"></fa-icon>
+            </button>
+        </div>
+    </div>
+  </form>
+
+  <div infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()"
+  >
+  <div *ngIf="albums">
+  <div class="row mt-4 align-items-center" *ngFor="let foo of albums">
+    <div class="col-5 py-2 text-center fw-bold border">
+
+      <img class="img-fluid img-table" src="../../assets/imgs/loading.gif" *ngIf="!imgLoaded">      
+      <img class="img-fluid img-table" src="{{ foo.image }}" [hidden]="!imgLoaded" (load)="imgLoaded = true">
+ 
+    </div>
+    <div class="col-6 bg-white py-2 text-center fw-bold border">
+        {{ foo.name }}<br>
+        By {{ foo.artist }}
+    </div>
+    <div class="col-1 bg-white py-2 text-center fw-bold border">
+        <a href="{{ foo.url }}" target="_blank">
+            <fa-icon [icon]="faShareSquare" cursor="pointer"></fa-icon>
+        </a>
+    </div>
+  </div>
+  </div>
+
+

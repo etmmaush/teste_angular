@@ -1,0 +1,314 @@
+.modal {
+  &_container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    background-color: rgba(#000000, 0.1);
+    overflow-y: scroll;
+
+    display: none;
+  }
+
+  &_wrapper {
+    width: 50%;
+    margin: 15% auto;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 6px 6px rgba(10, 16, 20, 0.15), 0 0 52px rgba(10, 16, 20, 0.12);
+  }
+
+  &_wrapper-2 {
+    width: 65%;
+    margin: 5% auto;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 6px 6px rgba(10, 16, 20, 0.15), 0 0 52px rgba(10, 16, 20, 0.12);
+  }
+
+  &_total {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+
+    &-text {
+      padding: 0.5rem 1rem;
+      color: #fff;
+      background-color: $color-primary;
+      font-size: 120%;
+
+      span {
+        font-size: 80%;
+        color: #000;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  &_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    &-text {
+      font-size: 100%;
+      color: $c-text-secondary;
+      font-weight: 600;
+    }
+
+    &-btn {
+      font-size: 100%;
+      color: $c-text-secondary;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &_row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  &_col {
+    &-2 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 1rem;
+    }
+
+    &-3 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    &-4 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.5fr 3fr 1fr 0.5fr;
+      // gap: 1rem;
+    }
+  }
+
+  &_box {
+    width: 100%;
+  }
+
+  &_item {
+    border: 2px solid $c-text-secondary;
+    background-color: #fff;
+    min-height: 1.8rem;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    min-width: 50%;
+    color: #000;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+
+      &::placeholder {
+        color: #000;
+        font-size: 100%;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $c-text-secondary;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #1a1a1a;
+      }
+
+      &::placeholder {
+        color: #000;
+        font-size: 100%;
+      }
+    }
+
+    select {
+      width: 100%;
+      border: none;
+      outline: none;
+      color: #000;
+      font-size: 100%;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    &-text {
+      font-size: 100%;
+      color: $font-default;
+    }
+
+    &-img {
+      min-width: 5rem;
+      max-width: 5rem;
+    }
+  }
+
+  &_file {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 5rem;
+    overflow: hidden;
+  }
+
+  &_icon {
+    font-size: 1.2rem;
+    color: $c-text-secondary;
+  }
+
+  &_display {
+    width: 80%;
+    font-size: 90%;
+    color: $c-text-secondary;
+    margin-left: 1rem;
+  }
+
+  &_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+
+  &_msg_container {
+    border: black 1px solid;
+    display: flex;
+    flex-direction: initial;
+    width: 100%;
+    overflow: auto;
+    height: 15rem;
+    margin-right: 11px;
+    display: inline;
+    padding: 1rem;
+  }
+
+  &_msg-card {
+    width: 100%;
+    padding: 1rem;
+    background-color: #edecec;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+
+    .msg-content {
+      font-size: 1rem;
+      color: #000;
+      line-height: 1.4rem;
+    }
+
+    .msg_title {
+      width: 100%;
+      color: $color-primary;
+      font-size: 1rem;
+      text-align: left;
+
+      span {
+        font-weight: 600;
+        margin-right: 0.3rem;
+      }
+    }
+  }
+
+  &_btn {
+    padding: 0.6rem;
+    width: 8rem;
+    background-color: #444444;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 80%;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    max-height: 3rem;
+    align-self: flex-end;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      transform: scale(1.1);
+    }
+  }
+
+  &_label {
+    font-size: 90%;
+    font-weight: 500;
+    color: $color-primary;
+  }
+
+  &_tab {
+    width: 100%;
+    max-height: 10rem;
+    padding-right: 0.5rem;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-primary;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}
+
+.h-5 {
+  height: 14rem !important;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.-active {
+  display: block;
+}

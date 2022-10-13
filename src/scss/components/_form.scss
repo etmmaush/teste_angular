@@ -1,0 +1,81 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-secondary;
+  font-size: 100%;
+
+  &_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: inherit;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  &_text {
+    margin-bottom: 2rem;
+    font-size: 100%;
+    text-align: center;
+    width: 90%;
+  }
+
+  &_field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 4.5rem;
+  }
+
+  &_input {
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    background-color: $color-secondary;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  &_error {
+    color: $color-primary;
+    font-size: 0.8rem;
+    width: 80%;
+    text-align: center;
+    margin: 0.5rem 0;
+    display: none;
+  }
+
+  &_other {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+}
+
+.login_logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  img {
+    width: 60%;
+  }
+}

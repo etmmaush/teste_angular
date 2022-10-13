@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "src/scss/main.scss";
+
+* {
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+// Redefinindo cores do bootstrap
+$primary-color: $color-primary;
+$primary: $color-primary;
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light {
+  background-color: $color-light;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+[cursor="pointer"] {
+  cursor: pointer;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.form-control-edit {
+  background-color: $color-light;
+  border-radius: 0px;
+  border: none;
+}
+
+.img-table {
+  width: auto;
+  height: 200px;
+}

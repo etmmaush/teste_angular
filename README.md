@@ -1,28 +1,51 @@
 # TesteAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+## NodeJS
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# teste_angular
+  Para instalar e iniciar este projeto, primeiramente deve se certificar de que possuí NodeJS e npm instalados em seu sistema.
+  Caso ainda não esteja instalado, você pode facilmente instalar seguinto as instruções presentes aqui:
+  
+  ```
+  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+  ```
+  
+## Abrindo o projeto
+  
+  Após a instalação do NodeJS, faça download deste projeto, clicando no botão "Code" acima, seguido de "Download ZIP" para baixar o projeto compactado.
+  Ou então baixar por meio de ferramentas de command-line do git:
+  
+  ```
+  git clone https://github.com/etmmaush/teste_angular
+  ```
+  
+## Instalando Angular
+  Após o download do projeto, abra seu terminal ou prompt de comando e instale pelo NPM as funcionalidades do Angular globalmente (possívelmente terá de usar o comando "sudo" ou habilitar funcionalidades de administrador para instalar apropriadamente):
+  
+  ```
+  npm install -g @angular/cli
+  ```
+  
+## Depedências
+  Após o download do projeto e a instalação do Angular, entre na pasta "teste-angular" ainda em terminal ou prompt de comando e baixa as depedências do projeto ao rodar o comando:
+  
+  ```
+  npm install
+  ```
+  
+## Iniciando a aplicação
+  Tendo o comando anterior sido finalizado sem nenhum erro, inicie o projeto em seu browser com o comando (ainda dentro da pasta "teste-angular"):
+  
+  ```
+  ng serve --open
+  ```
+  
+## Abra a aplicação
+  Contanto que o comando anterior não tenha apresentado nenhum erro, seu browser deve ter sido iniciado na tela principal da aplicação.
+  Caso o browser não tenha sido aberto automaticamente, você pode iniciá-lo manualmente e entrar no link:
+  
+  ```
+  http://localhost:4200/ 
+  ```
+  Aqui, você encontrará a tela inicial da aplicação.
+  
+  
